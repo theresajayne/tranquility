@@ -2,6 +2,9 @@ package com.github.theresajayne.entities;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
@@ -29,6 +32,18 @@ public class UniverseVOTest {
     {
         UniverseVO universeVO = new UniverseVO();
         universeVO.setName("Eden");
-        assertEquals("Eden",universeVO.getName());
+        assertEquals("Eden", universeVO.getName());
+    }
+
+    @Test
+    public void aUniverseHasRegions()
+    {
+        UniverseVO universeVO = new UniverseVO();
+        RegionVO regionVO = new RegionVO();
+        List<RegionVO> regionList = new ArrayList<RegionVO>();
+        regionList.add(regionVO);
+        universeVO.setRegions(regionList);
+        assertEquals(regionList,universeVO.getRegions());
+
     }
 }

@@ -1,5 +1,7 @@
 package com.github.theresajayne.entities;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -8,6 +10,7 @@ package com.github.theresajayne.entities;
  */
 public class UniverseVO {
     private String name;
+    private List<RegionVO> regions;
 
     public void setName(String name) {
         this.name = name;
@@ -15,5 +18,13 @@ public class UniverseVO {
 
     public String getName() {
         return name;
+    }
+
+    public void setRegions(List<RegionVO> regions) {
+        this.regions = regions;
+    }
+
+    public List<RegionVO> getRegions() {
+        return regions;
     }
 }

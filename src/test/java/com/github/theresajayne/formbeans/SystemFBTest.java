@@ -1,6 +1,5 @@
 package com.github.theresajayne.formbeans;
 
-import com.github.theresajayne.model.beans.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -21,63 +20,63 @@ public class SystemFBTest {
     @Test
     public void canCreateASystem()
     {
-        SystemVO systemVO = new SystemVO();
-        assertNotNull(systemVO);
+        SystemFB systemFB = new SystemFB();
+        assertNotNull(systemFB);
 
     }
 
     @Test
     public void aSystemHasAName()
     {
-        SystemVO systemVO = new SystemVO();
-        systemVO.setName("Wuos");
-        assertEquals("Wuos",systemVO.getName());
+        SystemFB systemFB = new SystemFB();
+        systemFB.setName("Wuos");
+        assertEquals("Wuos",systemFB.getName());
     }
 
     @Test
     public void aSystemHasPlanets()
     {
-        SystemVO systemVO = new SystemVO();
-        PlanetVO planetVO = new PlanetVO();
-        List<PlanetVO> planetList = new ArrayList<PlanetVO>();
-        planetList.add(planetVO);
-        systemVO.setPlanets(planetList);
-        TestCase.assertEquals(planetList,systemVO.getPlanets());
+        SystemFB systemFB = new SystemFB();
+        PlanetFB planetFB = new PlanetFB();
+        List<PlanetFB> planetList = new ArrayList<PlanetFB>();
+        planetList.add(planetFB);
+        systemFB.setPlanets(planetList);
+        TestCase.assertEquals(planetList,systemFB.getPlanets());
     }
 
     @Test
     public void aSystemHasAsteroidBelts()
     {
-        SystemVO systemVO = new SystemVO();
-        AsteroidBeltVO asteroidBeltVO = new AsteroidBeltVO();
-        List<AsteroidBeltVO> asteroidList = new ArrayList<AsteroidBeltVO>();
-        asteroidList.add(asteroidBeltVO);
-        systemVO.setAsteroidBelts(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getAsteroidBelts());
+        SystemFB systemFB = new SystemFB();
+        AsteroidBeltFB asteroidBeltFB = new AsteroidBeltFB();
+        List<AsteroidBeltFB> asteroidList = new ArrayList<AsteroidBeltFB>();
+        asteroidList.add(asteroidBeltFB);
+        systemFB.setAsteroidBelts(asteroidList);
+        TestCase.assertEquals(asteroidList,systemFB.getAsteroidBelts());
 
     }
 
     @Test
     public void aSystemHasStations()
     {
-        SystemVO systemVO = new SystemVO();
-        StationVO StationVO = new StationVO();
-        List<StationVO> asteroidList = new ArrayList<StationVO>();
-        asteroidList.add(StationVO);
-        systemVO.setStations(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getStations());
+        SystemFB systemFB = new SystemFB();
+        StationFB StationFB = new StationFB();
+        List<StationFB> asteroidList = new ArrayList<StationFB>();
+        asteroidList.add(StationFB);
+        systemFB.setStations(asteroidList);
+        TestCase.assertEquals(asteroidList,systemFB.getStations());
 
     }
 
     @Test
     public void aSystemHasCollidableObjects()
     {
-        SystemVO systemVO = new SystemVO();
-        CollidableObjectVO CollidableObjectVO = new CollidableObjectVO();
-        List<CollidableObjectVO> asteroidList = new ArrayList<CollidableObjectVO>();
-        asteroidList.add(CollidableObjectVO);
-        systemVO.setCollidableObjects(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getCollidableObjects());
+        SystemFB systemFB = new SystemFB();
+        CollidableObjectFB CollidableObjectFB = new CollidableObjectFB();
+        List<CollidableObjectFB> asteroidList = new ArrayList<CollidableObjectFB>();
+        asteroidList.add(CollidableObjectFB);
+        systemFB.setCollidableObjects(asteroidList);
+        TestCase.assertEquals(asteroidList,systemFB.getCollidableObjects());
 
     }    
     

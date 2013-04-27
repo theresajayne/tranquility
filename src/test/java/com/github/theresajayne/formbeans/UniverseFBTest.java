@@ -1,7 +1,5 @@
 package com.github.theresajayne.formbeans;
 
-import com.github.theresajayne.model.beans.RegionVO;
-import com.github.theresajayne.model.beans.UniverseVO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -23,8 +21,8 @@ public class UniverseFBTest {
     @Test
     public void canCreateAUniverse()
     {
-        UniverseVO universeVO = new UniverseVO();
-        assertNotNull(universeVO);
+        UniverseFB universeFB = new UniverseFB();
+        assertNotNull(universeFB);
     }
 
 
@@ -32,20 +30,20 @@ public class UniverseFBTest {
     @Test
     public void a_universe_has_a_name()
     {
-        UniverseVO universeVO = new UniverseVO();
-        universeVO.setName("Eden");
-        assertEquals("Eden", universeVO.getName());
+        UniverseFB universeFB = new UniverseFB();
+        universeFB.setName("Eden");
+        assertEquals("Eden", universeFB.getName());
     }
 
     @Test
     public void aUniverseHasRegions()
     {
-        UniverseVO universeVO = new UniverseVO();
-        RegionVO regionVO = new RegionVO();
-        List<RegionVO> regionList = new ArrayList<RegionVO>();
-        regionList.add(regionVO);
-        universeVO.setRegions(regionList);
-        assertEquals(regionList,universeVO.getRegions());
+        UniverseFB universeFB = new UniverseFB();
+        RegionFB regionFB = new RegionFB();
+        List<RegionFB> regionList = new ArrayList<RegionFB>();
+        regionList.add(regionFB);
+        universeFB.setRegions(regionList);
+        assertEquals(regionList,universeFB.getRegions());
 
     }
 }

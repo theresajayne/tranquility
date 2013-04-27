@@ -1,7 +1,5 @@
 package com.github.theresajayne.formbeans;
 
-import com.github.theresajayne.model.beans.ConstellationVO;
-import com.github.theresajayne.model.beans.RegionVO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,27 +19,27 @@ public class RegionFBTest {
     @Test
     public void canCreateARegion()
     {
-        RegionVO regionVO = new RegionVO();
-        assertNotNull(regionVO);
+        RegionFB regionFB = new RegionFB();
+        assertNotNull(regionFB);
 
     }
 
     @Test
     public void aRegionHasAName()
     {
-        RegionVO regionVO = new RegionVO();
-        regionVO.setName("The Forge");
-        assertEquals("The Forge",regionVO.getName());
+        RegionFB regionFB = new RegionFB();
+        regionFB.setName("The Forge");
+        assertEquals("The Forge",regionFB.getName());
     }
 
     @Test
     public void RegionHasConstellations()
     {
-        RegionVO regionVO = new RegionVO();
-        ConstellationVO constellationVO = new ConstellationVO();
-        List<ConstellationVO> constellationList = new ArrayList<ConstellationVO>();
-        constellationList.add(constellationVO);
-        regionVO.setConstellations(constellationList);
-        assertEquals(constellationList,regionVO.getConstellations());
+        RegionFB regionFB = new RegionFB();
+        ConstellationFB constellationFB = new ConstellationFB();
+        List<ConstellationFB> constellationList = new ArrayList<ConstellationFB>();
+        constellationList.add(constellationFB);
+        regionFB.setConstellations(constellationList);
+        assertEquals(constellationList,regionFB.getConstellations());
     }
 }

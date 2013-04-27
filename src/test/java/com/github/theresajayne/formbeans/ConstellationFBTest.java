@@ -1,7 +1,5 @@
 package com.github.theresajayne.formbeans;
 
-import com.github.theresajayne.model.beans.ConstellationVO;
-import com.github.theresajayne.model.beans.SystemVO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,26 +19,26 @@ public class ConstellationFBTest {
     @Test
     public void canCreateAConstellation()
     {
-        ConstellationVO constellationVO = new ConstellationVO();
-        assertNotNull(constellationVO);
+        ConstellationFB constellationFB = new ConstellationFB();
+        assertNotNull(constellationFB);
     }
 
     @Test
     public void constellationHasAName()
     {
-        ConstellationVO constellationVO = new ConstellationVO();
-        constellationVO.setName("Geminate");
-        assertEquals("Geminate", constellationVO.getName());
+        ConstellationFB constellationFB = new ConstellationFB();
+        constellationFB.setName("Geminate");
+        assertEquals("Geminate", constellationFB.getName());
     }
 
     @Test
     public void constellationHasSystems()
     {
-        ConstellationVO constellationVO = new ConstellationVO();
-        SystemVO systemVO = new SystemVO();
-        List<SystemVO> systemList = new ArrayList<SystemVO>();
-        systemList.add(systemVO);
-        constellationVO.setSystems(systemList);
-        assertEquals(systemList,constellationVO.getSystems());
+        ConstellationFB constellationFB = new ConstellationFB();
+        SystemFB systemFB = new SystemFB();
+        List<SystemFB> systemList = new ArrayList<SystemFB>();
+        systemList.add(systemFB);
+        constellationFB.setSystems(systemList);
+        assertEquals(systemList,constellationFB.getSystems());
     }
 }

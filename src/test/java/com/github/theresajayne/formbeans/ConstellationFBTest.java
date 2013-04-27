@@ -1,0 +1,46 @@
+package com.github.theresajayne.formbeans;
+
+import com.github.theresajayne.model.beans.ConstellationVO;
+import com.github.theresajayne.model.beans.SystemVO;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertNotNull;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: Theresa
+ * Date: 27/04/13
+ * Time: 18:51
+
+ */
+public class ConstellationFBTest {
+    @Test
+    public void canCreateAConstellation()
+    {
+        ConstellationVO constellationVO = new ConstellationVO();
+        assertNotNull(constellationVO);
+    }
+
+    @Test
+    public void constellationHasAName()
+    {
+        ConstellationVO constellationVO = new ConstellationVO();
+        constellationVO.setName("Geminate");
+        assertEquals("Geminate", constellationVO.getName());
+    }
+
+    @Test
+    public void constellationHasSystems()
+    {
+        ConstellationVO constellationVO = new ConstellationVO();
+        SystemVO systemVO = new SystemVO();
+        List<SystemVO> systemList = new ArrayList<SystemVO>();
+        systemList.add(systemVO);
+        constellationVO.setSystems(systemList);
+        assertEquals(systemList,constellationVO.getSystems());
+    }
+}

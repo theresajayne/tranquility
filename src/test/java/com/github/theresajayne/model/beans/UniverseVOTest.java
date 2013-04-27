@@ -1,5 +1,7 @@
-package com.github.theresajayne.entities;
+package com.github.theresajayne.model.beans;
 
+import com.github.theresajayne.model.beans.RegionVO;
+import com.github.theresajayne.model.beans.UniverseVO;
 import org.junit.Test;
 
 import java.util.ArrayList;

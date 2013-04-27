@@ -1,4 +1,9 @@
-package com.github.theresajayne.entities;
+package com.github.theresajayne.model.beans;
+
+import com.github.theresajayne.model.beans.AsteroidBeltVO;
+import com.github.theresajayne.model.beans.CollidableObjectVO;
+import com.github.theresajayne.model.beans.PlanetVO;
+import com.github.theresajayne.model.beans.StationVO;
 
 import java.util.List;
 

@@ -1,5 +1,6 @@
-package com.github.theresajayne.entities;
+package com.github.theresajayne.formbeans;
 
+import com.github.theresajayne.model.beans.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ import static junit.framework.TestCase.assertNotNull;
  * Date: 27/04/13
  * Time: 18:59
  */
-public class SystemVOTest {
+public class SystemFBTest {
 
     @Test
     public void canCreateASystem()

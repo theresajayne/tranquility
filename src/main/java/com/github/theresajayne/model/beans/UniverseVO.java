@@ -1,4 +1,6 @@
-package com.github.theresajayne.entities;
+package com.github.theresajayne.model.beans;
+
+import com.github.theresajayne.model.beans.RegionVO;
 
 import java.util.List;
 

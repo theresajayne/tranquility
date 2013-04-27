@@ -1,4 +1,4 @@
-package com.github.theresajayne.entities;
+package com.github.theresajayne.model.beans;
 
 import java.util.List;
 

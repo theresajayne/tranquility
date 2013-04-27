@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertNotNull;
  * User: Theresa
  * Date: 27/04/13
  * Time: 18:51
- * To change this template use File | Settings | File Templates.
+
  */
 public class ConstellationVOTest {
     @Test

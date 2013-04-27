@@ -7,7 +7,6 @@ import java.util.List;
  * User: Theresa
  * Date: 27/04/13
  * Time: 18:50
- * To change this template use File | Settings | File Templates.
  */
 public class ConstellationVO {
     private String name;

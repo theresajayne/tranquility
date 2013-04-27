@@ -6,11 +6,12 @@ import java.util.List;
  * Created with IntelliJ IDEA.
  * User: Theresa
  * Date: 27/04/13
- * Time: 17:18
+ * Time: 18:50
+ * To change this template use File | Settings | File Templates.
  */
-public class RegionVO {
+public class ConstellationVO {
     private String name;
-    private List<ConstellationVO> constellations;
+    private List<SystemVO> systems;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +21,11 @@ public class RegionVO {
         return name;
     }
 
-    public void setConstellations(List<ConstellationVO> constellations) {
-        this.constellations = constellations;
+    public void setSystems(List<SystemVO> systems) {
+        this.systems = systems;
     }
 
-    public List<ConstellationVO> getConstellations() {
-        return constellations;
+    public List<SystemVO> getSystems() {
+        return systems;
     }
 }

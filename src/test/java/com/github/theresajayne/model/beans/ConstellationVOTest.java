@@ -1,13 +1,11 @@
 package com.github.theresajayne.model.beans;
 
-import com.github.theresajayne.model.beans.ConstellationVO;
-import com.github.theresajayne.model.beans.SystemVO;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
 /**

@@ -15,25 +15,27 @@ import static junit.framework.TestCase.assertNotNull;
  * Time: 1607
  */
 public class UserVOTest {
-   @Test
-    public void canCreateAUser(){
-        UserVO userVO = new UserVO();
-         assertNotNull(userVO);
-    }
     @Test
-    public void userHasAName(){
+    public void canCreateAUser() {
+        UserVO userVO = new UserVO();
+        assertNotNull(userVO);
+    }
+
+    @Test
+    public void userHasAName() {
         UserVO userVO = new UserVO();
         userVO.setName("Mark King");
         assertEquals("Mark King", userVO.getName());
     }
+
     @Test
-    public void userHasCharacters(){
+    public void userHasCharacters() {
         UserVO userVO = new UserVO();
         CharacterVO characterVO = new CharacterVO();
         List<CharacterVO> characterList = new ArrayList<CharacterVO>();
         characterList.add(characterVO);
         userVO.setCharacters(characterList);
-        assertEquals(characterList,userVO.getCharacters());
+        assertEquals(characterList, userVO.getCharacters());
     }
 
 }

@@ -2,6 +2,7 @@ package com.github.theresajayne.model.beans;
 
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
 /**
@@ -15,5 +16,12 @@ public class CharactersVOTest {
     public void canCreateACharacter(){
         CharacterVO characterVO = new CharacterVO();
         assertNotNull(characterVO);
+    }
+
+    @Test
+    public void characterHasAName(){
+        CharacterVO characterVO = new CharacterVO();
+        characterVO.setName("Worf");
+        assertEquals("Worf",characterVO.getName());
     }
 }

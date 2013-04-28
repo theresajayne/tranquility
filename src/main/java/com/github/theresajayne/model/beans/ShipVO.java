@@ -6,5 +6,5 @@ package com.github.theresajayne.model.beans;
  * Date: 28/04/13
  * Time: 16:59
  */
-public class ShipsVO {
+public class ShipVO {
 }

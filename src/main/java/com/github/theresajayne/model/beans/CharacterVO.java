@@ -1,5 +1,7 @@
 package com.github.theresajayne.model.beans;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Mark King
@@ -8,6 +10,7 @@ package com.github.theresajayne.model.beans;
  */
 public class CharacterVO {
     private String name;
+    private List<ShipVO> ships;
 
     public void setName(String name) {
         this.name = name;
@@ -15,5 +18,13 @@ public class CharacterVO {
 
     public String getName() {
         return name;
+    }
+
+    public void setShips(List<ShipVO> ships) {
+        this.ships = ships;
+    }
+
+    public List<ShipVO> getShips() {
+        return ships;
     }
 }

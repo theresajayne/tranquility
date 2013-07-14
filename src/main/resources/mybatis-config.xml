@@ -6,7 +6,7 @@
 <configuration>
     <settings>
         <setting name="cacheEnabled" value="true"/>
-        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
         <setting name="multipleResultSetsEnabled" value="true"/>
         <setting name="useColumnLabel" value="true"/>
         <setting name="useGeneratedKeys" value="false"/>
@@ -22,7 +22,7 @@
     <typeAliases>
     </typeAliases>
     <mappers>
-        <mapper resource="com/github/theresajayne/model/mappers/UniverseMapper.xml"/>
+        <mapper resource="mappers/UniverseMapper.xml"/>
     </mappers>
 
 </configuration>

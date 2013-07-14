@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="universe">
+
+    <resultMap id="universeResultMap" type="com.github.theresajayne.tranquility.model.beans.UniverseVO">
+        <result property="universeId" column="UNIVERSE_ID"/>
+        <result property="name" column="UNIVERSE_NAME"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="universeResultMap">
+        SELECT
+            UNIVERSE_ID,
+            UNIVERSE_NAME
+        FROM
+          TRANQUILITY.UNIVERSE
+    </select>
+
+   <insert id="insertUniverse" parameterType="com.github.theresajayne.tranquility.model.beans.UniverseVO">
+       INSERT INTO
+       TRANQUILITY.UNIVERSE
+       (
+          UNIVERSE_ID,
+          UNIVERSE_NAME
+       )
+       VALUES
+       (
+          #{universeId, jdbcType=VARCHAR},
+          #{name, jdbcType=VARCHAR}
+       )
+   </insert>
+</mapper>

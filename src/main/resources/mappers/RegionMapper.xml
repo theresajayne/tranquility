@@ -13,15 +13,18 @@
         </association>
     </resultMap>
 
-    <select id="selectAll" resultMap="universeResultMap">
+    <select id="selectAll" resultMap="regionResultMap">
         SELECT
-            UNIVERSE_ID,
-            UNIVERSE_NAME
+            R.REGION_ID,
+            R.REGION_NAME,
+            C.CONSTELLATION_ID,
+            C.CONSTELLATION_NAME
         FROM
-          TRANQUILITY.UNIVERSE
+          TRANQUILITY.REGION R
+          INNER JOIN TRANQUILITY.CONSTELLATION C ON R.CONSTELLATION_ID = C.CONSTELLATION_ID
     </select>
 
-    <insert id="insertUniverse" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
+    <insert id="insertregion" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
        INSERT INTO
        TRANQUILITY.REGION
        (

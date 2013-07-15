@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="constellation">
+
+    <resultMap id="constellationResultMap" type="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
+        <result property="constellationID" column="CONSTELLATION_ID"/>
+        <result property="name" column="CONSTELLATION_NAME"/>
+        <association property="universeVO" javaType="com.github.theresajayne.tranquility.model.beans.UniverseVO">
+            <result property="universeID" column="UNIVERSE_ID"/>
+            <result property="name" column="UNIVERSE_NAME"/>
+        </association>
+    </resultMap>
+
+    <select id="selectAll" resultMap="constellationResultMap">
+        SELECT
+            C.CONSTELLATION_ID,
+            C.CONSTELLATION_NAME,
+            U.UNIVERSE_ID,
+            U.UNIVERSE_NAME
+        FROM
+          TRANQUILITY.CONSTELLATION C
+          INNER JOIN TRANQUILITY.UNIVERSE U ON C.UNIVERSE_ID = U.UNIVERSE_ID
+    </select>
+
+    <insert id="insertConstellation" parameterType="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
+       INSERT INTO
+       TRANQUILITY.CONSTELLATION
+       (
+          CONSTELLATION_ID,
+          CONSTELLATION_NAME,
+          UNIVERSE_ID
+
+       )
+       VALUES
+       (
+          #{constellationId, jdbcType=VARCHAR},
+          #{name, jdbcType=VARCHAR},
+          #{universeVO.universeID, jdbcType=VARCHAR}
+       )
+   </insert>
+</mapper>

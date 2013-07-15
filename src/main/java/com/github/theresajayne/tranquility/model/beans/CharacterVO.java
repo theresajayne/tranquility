@@ -10,7 +10,8 @@ import java.util.List;
  */
 public class CharacterVO {
     private String name;
-    private List<ShipVO> ships;
+    private Long characterID;
+    private UserVO userVO;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +21,20 @@ public class CharacterVO {
         return name;
     }
 
-    public void setShips(List<ShipVO> ships) {
-        this.ships = ships;
+
+    public Long getCharacterID() {
+        return characterID;
     }
 
-    public List<ShipVO> getShips() {
-        return ships;
+    public void setCharacterID(Long characterID) {
+        this.characterID = characterID;
+    }
+
+    public UserVO getUserVO() {
+        return userVO;
+    }
+
+    public void setUserVO(UserVO userVO) {
+        this.userVO = userVO;
     }
 }

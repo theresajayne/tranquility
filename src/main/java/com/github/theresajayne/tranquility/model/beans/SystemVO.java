@@ -10,10 +10,8 @@ import java.util.List;
  */
 public class SystemVO {
     private String name;
-    private List<PlanetVO> planets;
-    private List<AsteroidBeltVO> asteroidBelts;
-    private List<StationVO> stations;
-    private List<CollidableObjectVO> collidableObjects;
+    private Long systemID;
+    private ConstellationVO constellationVO;
 
     public void setName(String name) {
         this.name = name;
@@ -23,35 +21,20 @@ public class SystemVO {
         return this.name;
     }
 
-    public void setPlanets(List<PlanetVO> planets) {
-        this.planets = planets;
+
+    public Long getSystemID() {
+        return systemID;
     }
 
-    public List<PlanetVO> getPlanets() {
-        return planets;
+    public void setSystemID(Long systemID) {
+        this.systemID = systemID;
     }
 
-    public void setAsteroidBelts(List<AsteroidBeltVO> asteroidBelts) {
-        this.asteroidBelts = asteroidBelts;
+    public ConstellationVO getConstellationVO() {
+        return constellationVO;
     }
 
-    public List<AsteroidBeltVO> getAsteroidBelts() {
-        return asteroidBelts;
-    }
-
-    public void setStations(List<StationVO> stations) {
-        this.stations = stations;
-    }
-
-    public List<StationVO> getStations() {
-        return stations;
-    }
-
-    public void setCollidableObjects(List<CollidableObjectVO> collidableObjects) {
-        this.collidableObjects = collidableObjects;
-    }
-
-    public List<CollidableObjectVO> getCollidableObjects() {
-        return collidableObjects;
+    public void setConstellationVO(ConstellationVO constellationVO) {
+        this.constellationVO = constellationVO;
     }
 }

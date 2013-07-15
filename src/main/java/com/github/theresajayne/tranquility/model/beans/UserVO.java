@@ -10,7 +10,8 @@ import java.util.List;
  */
 public class UserVO {
     private String name;
-    private List<CharacterVO> characters;
+    private Long userID;
+    private String password;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +21,20 @@ public class UserVO {
         return name;
     }
 
-    public void setCharacters(List<CharacterVO> characters) {
-        this.characters = characters;
+
+    public Long getUserID() {
+        return userID;
     }
 
-    public List<CharacterVO> getCharacters() {
-        return characters;
+    public void setUserID(Long userID) {
+        this.userID = userID;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

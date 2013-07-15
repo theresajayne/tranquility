@@ -32,14 +32,5 @@ public class RegionVOTest {
         assertEquals("The Forge",regionVO.getName());
     }
 
-    @Test
-    public void RegionHasConstellations()
-    {
-        RegionVO regionVO = new RegionVO();
-        ConstellationVO constellationVO = new ConstellationVO();
-        List<ConstellationVO> constellationList = new ArrayList<ConstellationVO>();
-        constellationList.add(constellationVO);
-        regionVO.setConstellations(constellationList);
-        assertEquals(constellationList,regionVO.getConstellations());
-    }
+
 }

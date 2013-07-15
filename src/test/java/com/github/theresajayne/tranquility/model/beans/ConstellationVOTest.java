@@ -31,14 +31,5 @@ public class ConstellationVOTest {
         assertEquals("Geminate", constellationVO.getName());
     }
 
-    @Test
-    public void constellationHasSystems()
-    {
-        ConstellationVO constellationVO = new ConstellationVO();
-        SystemVO systemVO = new SystemVO();
-        List<SystemVO> systemList = new ArrayList<SystemVO>();
-        systemList.add(systemVO);
-        constellationVO.setSystems(systemList);
-        assertEquals(systemList,constellationVO.getSystems());
-    }
+
 }

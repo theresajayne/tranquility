@@ -28,13 +28,5 @@ public class CharactersVOTest {
         assertEquals("Worf", characterVO.getName());
     }
 
-    @Test
-    public void characterHasShips(){
-        CharacterVO characterVO = new CharacterVO();
-        ShipVO shipVO = new ShipVO();
-        List<ShipVO> shipList = new ArrayList<ShipVO>();
-        shipList.add(shipVO);
-        characterVO.setShips(shipList);
-        assertEquals(shipList,characterVO.getShips());
-    }
+
 }

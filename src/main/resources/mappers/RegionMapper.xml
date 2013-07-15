@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="region">
+
+    <resultMap id="regionResultMap" type="com.github.theresajayne.tranquility.model.beans.RegionVO">
+        <result property="regionID" column="REGION_ID"/>
+        <result property="name" column="REGION_NAME"/>
+        <association property="constellationVO" javaType="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
+            <result property="constellationID" column="CONSTELLATION_ID"/>
+            <result property="name" column="CONSTELLATION_NAME"/>
+        </association>
+    </resultMap>
+
+    <select id="selectAll" resultMap="universeResultMap">
+        SELECT
+            UNIVERSE_ID,
+            UNIVERSE_NAME
+        FROM
+          TRANQUILITY.UNIVERSE
+    </select>
+
+    <insert id="insertUniverse" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
+       INSERT INTO
+       TRANQUILITY.REGION
+       (
+          REGION_ID,
+          REGION_NAME,
+          CONSTELLATION_ID
+
+       )
+       VALUES
+       (
+          #{REGIONId, jdbcType=VARCHAR},
+          #{name, jdbcType=VARCHAR},
+          #{constellationVO.constellationID, jdbcType=VARCHAR}
+       )
+   </insert>
+</mapper>

@@ -33,51 +33,5 @@ public class SystemVOTest {
         assertEquals("Wuos",systemVO.getName());
     }
 
-    @Test
-    public void aSystemHasPlanets()
-    {
-        SystemVO systemVO = new SystemVO();
-        PlanetVO planetVO = new PlanetVO();
-        List<PlanetVO> planetList = new ArrayList<PlanetVO>();
-        planetList.add(planetVO);
-        systemVO.setPlanets(planetList);
-        TestCase.assertEquals(planetList,systemVO.getPlanets());
-    }
-
-    @Test
-    public void aSystemHasAsteroidBelts()
-    {
-        SystemVO systemVO = new SystemVO();
-        AsteroidBeltVO asteroidBeltVO = new AsteroidBeltVO();
-        List<AsteroidBeltVO> asteroidList = new ArrayList<AsteroidBeltVO>();
-        asteroidList.add(asteroidBeltVO);
-        systemVO.setAsteroidBelts(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getAsteroidBelts());
-
-    }
-
-    @Test
-    public void aSystemHasStations()
-    {
-        SystemVO systemVO = new SystemVO();
-        StationVO StationVO = new StationVO();
-        List<StationVO> asteroidList = new ArrayList<StationVO>();
-        asteroidList.add(StationVO);
-        systemVO.setStations(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getStations());
-
-    }
-
-    @Test
-    public void aSystemHasCollidableObjects()
-    {
-        SystemVO systemVO = new SystemVO();
-        CollidableObjectVO CollidableObjectVO = new CollidableObjectVO();
-        List<CollidableObjectVO> asteroidList = new ArrayList<CollidableObjectVO>();
-        asteroidList.add(CollidableObjectVO);
-        systemVO.setCollidableObjects(asteroidList);
-        TestCase.assertEquals(asteroidList,systemVO.getCollidableObjects());
-
-    }    
     
 }

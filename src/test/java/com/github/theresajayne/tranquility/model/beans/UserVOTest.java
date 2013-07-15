@@ -28,14 +28,6 @@ public class UserVOTest {
         assertEquals("Mark King", userVO.getName());
     }
 
-    @Test
-    public void userHasCharacters() {
-        UserVO userVO = new UserVO();
-        CharacterVO characterVO = new CharacterVO();
-        List<CharacterVO> characterList = new ArrayList<CharacterVO>();
-        characterList.add(characterVO);
-        userVO.setCharacters(characterList);
-        assertEquals(characterList, userVO.getCharacters());
-    }
+
 
 }

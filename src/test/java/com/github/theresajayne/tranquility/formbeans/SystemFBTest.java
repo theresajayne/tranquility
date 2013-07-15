@@ -33,51 +33,6 @@ public class SystemFBTest {
         assertEquals("Wuos",systemFB.getName());
     }
 
-    @Test
-    public void aSystemHasPlanets()
-    {
-        SystemFB systemFB = new SystemFB();
-        PlanetFB planetFB = new PlanetFB();
-        List<PlanetFB> planetList = new ArrayList<PlanetFB>();
-        planetList.add(planetFB);
-        systemFB.setPlanets(planetList);
-        TestCase.assertEquals(planetList,systemFB.getPlanets());
-    }
 
-    @Test
-    public void aSystemHasAsteroidBelts()
-    {
-        SystemFB systemFB = new SystemFB();
-        AsteroidBeltFB asteroidBeltFB = new AsteroidBeltFB();
-        List<AsteroidBeltFB> asteroidList = new ArrayList<AsteroidBeltFB>();
-        asteroidList.add(asteroidBeltFB);
-        systemFB.setAsteroidBelts(asteroidList);
-        TestCase.assertEquals(asteroidList,systemFB.getAsteroidBelts());
-
-    }
-
-    @Test
-    public void aSystemHasStations()
-    {
-        SystemFB systemFB = new SystemFB();
-        StationFB StationFB = new StationFB();
-        List<StationFB> asteroidList = new ArrayList<StationFB>();
-        asteroidList.add(StationFB);
-        systemFB.setStations(asteroidList);
-        TestCase.assertEquals(asteroidList,systemFB.getStations());
-
-    }
-
-    @Test
-    public void aSystemHasCollidableObjects()
-    {
-        SystemFB systemFB = new SystemFB();
-        CollidableObjectFB CollidableObjectFB = new CollidableObjectFB();
-        List<CollidableObjectFB> asteroidList = new ArrayList<CollidableObjectFB>();
-        asteroidList.add(CollidableObjectFB);
-        systemFB.setCollidableObjects(asteroidList);
-        TestCase.assertEquals(asteroidList,systemFB.getCollidableObjects());
-
-    }    
     
 }

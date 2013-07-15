@@ -32,14 +32,5 @@ public class RegionFBTest {
         assertEquals("The Forge",regionFB.getName());
     }
 
-    @Test
-    public void RegionHasConstellations()
-    {
-        RegionFB regionFB = new RegionFB();
-        ConstellationFB constellationFB = new ConstellationFB();
-        List<ConstellationFB> constellationList = new ArrayList<ConstellationFB>();
-        constellationList.add(constellationFB);
-        regionFB.setConstellations(constellationList);
-        assertEquals(constellationList,regionFB.getConstellations());
-    }
+
 }

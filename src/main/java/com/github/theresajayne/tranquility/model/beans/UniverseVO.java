@@ -1,5 +1,7 @@
 package com.github.theresajayne.tranquility.model.beans;
 
+import com.github.theresajayne.tranquility.common.ValueObject;
+
 import java.util.List;
 
 /**
@@ -8,7 +10,7 @@ import java.util.List;
  * Date: 21/04/13
  * Time: 22:49
  */
-public class UniverseVO {
+public class UniverseVO extends ValueObject {
     private Long universeID;
     private String name;
 

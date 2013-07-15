@@ -1,5 +1,7 @@
 package com.github.theresajayne.tranquility.formbeans;
 
+import com.github.theresajayne.tranquility.common.FormBean;
+
 import java.util.List;
 
 /**
@@ -8,7 +10,7 @@ import java.util.List;
  * Date: 27/04/13
  * Time: 19:28
  */
-public class ConstellationFB {
+public class ConstellationFB extends FormBean {
     private Long constellationID;
     private String name;
     private RegionFB regionFB;

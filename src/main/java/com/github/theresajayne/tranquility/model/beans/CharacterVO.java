@@ -1,5 +1,7 @@
 package com.github.theresajayne.tranquility.model.beans;
 
+import com.github.theresajayne.tranquility.common.ValueObject;
+
 import java.util.List;
 
 /**
@@ -8,7 +10,7 @@ import java.util.List;
  * Date: 28/04/13
  * Time: 17:12
  */
-public class CharacterVO {
+public class CharacterVO extends ValueObject {
     private String name;
     private Long characterID;
     private UserVO userVO;

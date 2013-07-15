@@ -30,15 +30,12 @@ public class ConstellationFBTest {
         constellationFB.setName("Geminate");
         assertEquals("Geminate", constellationFB.getName());
     }
-
     @Test
-    public void constellationHasSystems()
+    public void constellationHasRegion()
     {
         ConstellationFB constellationFB = new ConstellationFB();
-        SystemFB systemFB = new SystemFB();
-        List<SystemFB> systemList = new ArrayList<SystemFB>();
-        systemList.add(systemFB);
-        constellationFB.setSystems(systemList);
-        assertEquals(systemList,constellationFB.getSystems());
+        RegionFB regionFB = new RegionFB();
+        constellationFB.setRegionFB(regionFB);
+        assertEquals(regionFB, constellationFB.getRegionFB());
     }
 }

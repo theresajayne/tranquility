@@ -26,7 +26,6 @@ public class UniverseVOTest {
     }
 
 
-
     @Test
     public void a_universe_has_a_name()
     {
@@ -35,15 +34,4 @@ public class UniverseVOTest {
         assertEquals("Eden", universeVO.getName());
     }
 
-    @Test
-    public void aUniverseHasRegions()
-    {
-        UniverseVO universeVO = new UniverseVO();
-        RegionVO regionVO = new RegionVO();
-        List<RegionVO> regionList = new ArrayList<RegionVO>();
-        regionList.add(regionVO);
-        universeVO.setRegions(regionList);
-        assertEquals(regionList,universeVO.getRegions());
-
-    }
 }

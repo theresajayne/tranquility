@@ -9,8 +9,9 @@ import java.util.List;
  * Time: 19:28
  */
 public class ConstellationFB {
+    private Long constellationID;
     private String name;
-    private List<SystemFB> systems;
+    private RegionFB regionFB;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +21,19 @@ public class ConstellationFB {
         return name;
     }
 
-    public void setSystems(List<SystemFB> systems) {
-        this.systems = systems;
+    public Long getConstellationID() {
+        return constellationID;
     }
 
-    public List<SystemFB> getSystems() {
-        return systems;
+    public void setConstellationID(Long constellationID) {
+        this.constellationID = constellationID;
+    }
+
+    public RegionFB getRegionFB() {
+        return regionFB;
+    }
+
+    public void setRegionFB(RegionFB regionFB) {
+        this.regionFB = regionFB;
     }
 }

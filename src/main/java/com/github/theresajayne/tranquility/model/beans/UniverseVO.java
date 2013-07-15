@@ -9,8 +9,8 @@ import java.util.List;
  * Time: 22:49
  */
 public class UniverseVO {
+    private Long universeID;
     private String name;
-    private List<RegionVO> regions;
 
     public void setName(String name) {
         this.name = name;
@@ -20,11 +20,11 @@ public class UniverseVO {
         return name;
     }
 
-    public void setRegions(List<RegionVO> regions) {
-        this.regions = regions;
+    public Long getUniverseID() {
+        return universeID;
     }
 
-    public List<RegionVO> getRegions() {
-        return regions;
+    public void setUniverseID(Long universeID) {
+        this.universeID = universeID;
     }
 }

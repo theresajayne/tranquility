@@ -10,10 +10,8 @@ import java.util.List;
  */
 public class SystemFB {
     private String name;
-    private List<PlanetFB> planets;
-    private List<AsteroidBeltFB> asteroidBelts;
-    private List<StationFB> stations;
-    private List<CollidableObjectFB> collidableObjects;
+    private Long systemID;
+    private ConstellationFB constellationFB;
 
     public void setName(String name) {
         this.name = name;
@@ -23,35 +21,20 @@ public class SystemFB {
         return name;
     }
 
-    public void setPlanets(List<PlanetFB> planets) {
-        this.planets = planets;
+    public Long getSystemID() {
+        return systemID;
     }
 
-    public List<PlanetFB> getPlanets() {
-        return planets;
+    public void setSystemID(Long systemID) {
+        this.systemID = systemID;
     }
 
-    public void setAsteroidBelts(List<AsteroidBeltFB> asteroidBelts) {
-        this.asteroidBelts = asteroidBelts;
+
+    public ConstellationFB getConstellationFB() {
+        return constellationFB;
     }
 
-    public List<AsteroidBeltFB> getAsteroidBelts() {
-        return asteroidBelts;
-    }
-
-    public void setStations(List<StationFB> stations) {
-        this.stations = stations;
-    }
-
-    public List<StationFB> getStations() {
-        return stations;
-    }
-
-    public void setCollidableObjects(List<CollidableObjectFB> collidableObjects) {
-        this.collidableObjects = collidableObjects;
-    }
-
-    public List<CollidableObjectFB> getCollidableObjects() {
-        return collidableObjects;
+    public void setConstellationFB(ConstellationFB constellationFB) {
+        this.constellationFB = constellationFB;
     }
 }

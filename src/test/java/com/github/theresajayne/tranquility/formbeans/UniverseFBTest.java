@@ -35,15 +35,4 @@ public class UniverseFBTest {
         assertEquals("Eden", universeFB.getName());
     }
 
-    @Test
-    public void aUniverseHasRegions()
-    {
-        UniverseFB universeFB = new UniverseFB();
-        RegionFB regionFB = new RegionFB();
-        List<RegionFB> regionList = new ArrayList<RegionFB>();
-        regionList.add(regionFB);
-        universeFB.setRegions(regionList);
-        assertEquals(regionList,universeFB.getRegions());
-
-    }
 }

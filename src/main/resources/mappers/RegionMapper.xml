@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="region">
+<mapper namespace="regionMapper">
 
     <resultMap id="regionResultMap" type="com.github.theresajayne.tranquility.model.beans.RegionVO">
         <result property="regionID" column="REGION_ID"/>
@@ -24,20 +24,19 @@
           INNER JOIN TRANQUILITY.CONSTELLATION C ON R.CONSTELLATION_ID = C.CONSTELLATION_ID
     </select>
 
-    <insert id="insertregion" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
+    <insert id="insertRegion" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
        INSERT INTO
        TRANQUILITY.REGION
        (
           REGION_ID,
           REGION_NAME,
-          CONSTELLATION_ID
-
+          UNIVERSE_ID
        )
        VALUES
        (
-          #{REGIONId, jdbcType=VARCHAR},
+          #{regionID, jdbcType=VARCHAR},
           #{name, jdbcType=VARCHAR},
-          #{constellationVO.constellationID, jdbcType=VARCHAR}
+          #{universeVO.universeID, jdbcType=VARCHAR}
        )
    </insert>
 </mapper>

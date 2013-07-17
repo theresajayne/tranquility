@@ -2,8 +2,8 @@ package com.github.theresajayne.tranquility.model.dao;
 
 import com.github.theresajayne.tranquility.model.beans.UniverseVO;
 import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * Date: 15/07/13
  * Time: 17:52
  */
-@Service
+@Repository
 public class UniverseDaoImpl implements UniverseDao {
     
     @Autowired

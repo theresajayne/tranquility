@@ -5,11 +5,10 @@ package com.github.theresajayne.tranquility.common;
  * User: Theresa
  * Date: 15/07/13
  * Time: 17:13
- * To change this template use File | Settings | File Templates.
  */
-public interface Converter<F extends FormBean, V extends ValueObject> {
+public interface Converter<FB extends FormBean, VO extends ValueObject> {
 
-    public V toValueObject(F fb);
+    public VO toValueObject(FB fb);
 
-    public F toFormBean(V vo);
+    public FB toFormBean(VO vo);
 }

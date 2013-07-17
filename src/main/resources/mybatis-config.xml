@@ -23,6 +23,7 @@
     </typeAliases>
     <mappers>
         <mapper resource="mappers/UniverseMapper.xml"/>
+        <mapper resource="mappers/RegionMapper.xml"/>
     </mappers>
 
 </configuration>

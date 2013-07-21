@@ -6,7 +6,7 @@
 
     <resultMap id="universeResultMap" type="com.github.theresajayne.tranquility.model.beans.UniverseVO">
         <result property="universeID" column="UNIVERSE_ID"/>
-        <result property="name" column="UNIVERSE_NAME"/>
+        <result property="universeName" column="UNIVERSE_NAME"/>
     </resultMap>
 
     <select id="selectAll" resultMap="universeResultMap">
@@ -15,6 +15,26 @@
             UNIVERSE_NAME
         FROM
           TRANQUILITY.UNIVERSE
+    </select>
+
+    <select id="selectAllByID" resultMap="universeResultMap" parameterType="java.lang.Long">
+        SELECT
+            UNIVERSE_ID,
+            UNIVERSE_NAME
+        FROM
+          TRANQUILITY.UNIVERSE
+       WHERE
+          UNIVERSE_NAME = #{universeID, jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectAllByName" resultMap="universeResultMap" parameterType="java.lang.String">
+        SELECT
+            UNIVERSE_ID,
+            UNIVERSE_NAME
+        FROM
+          TRANQUILITY.UNIVERSE
+       WHERE
+          UNIVERSE_NAME = #{universeName, jdbcType=VARCHAR}
     </select>
 
    <insert id="saveUniverse" parameterType="com.github.theresajayne.tranquility.model.beans.UniverseVO">
@@ -27,7 +47,7 @@
        VALUES
        (
           #{universeID, jdbcType=VARCHAR},
-          #{name, jdbcType=VARCHAR}
+          #{universeName, jdbcType=VARCHAR}
        )
    </insert>
 </mapper>

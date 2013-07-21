@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
@@ -27,8 +24,8 @@ public class ConstellationFBTest {
     public void constellationHasAName()
     {
         ConstellationFB constellationFB = new ConstellationFB();
-        constellationFB.setName("Geminate");
-        assertEquals("Geminate", constellationFB.getName());
+        constellationFB.setConstellationName("Geminate");
+        assertEquals("Geminate", constellationFB.getConstellationName());
     }
     @Test
     public void constellationHasRegion()

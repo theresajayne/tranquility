@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="constellation">
+<mapper namespace="constellationMapper">
 
     <resultMap id="constellationResultMap" type="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
         <result property="constellationID" column="CONSTELLATION_ID"/>
-        <result property="name" column="CONSTELLATION_NAME"/>
-        <association property="universeVO" javaType="com.github.theresajayne.tranquility.model.beans.UniverseVO">
-            <result property="universeID" column="UNIVERSE_ID"/>
-            <result property="name" column="UNIVERSE_NAME"/>
+        <result property="constellationName" column="CONSTELLATION_NAME"/>
+        <association property="regionVO" javaType="com.github.theresajayne.tranquility.model.beans.RegionVO">
+            <result property="regionID" column="REGION_ID"/>
+            <result property="regionName" column="REGION_NAME"/>
         </association>
     </resultMap>
 
@@ -17,12 +17,52 @@
         SELECT
             C.CONSTELLATION_ID,
             C.CONSTELLATION_NAME,
-            U.UNIVERSE_ID,
-            U.UNIVERSE_NAME
+            R.REGION_ID,
+            R.REGION_NAME
         FROM
           TRANQUILITY.CONSTELLATION C
-          INNER JOIN TRANQUILITY.UNIVERSE U ON C.UNIVERSE_ID = U.UNIVERSE_ID
+          INNER JOIN TRANQUILITY.REGION R ON C.REGION_ID = R.REGION_ID
     </select>
+
+    <select id="selectAllByRegion" resultMap="constellationResultMap" parameterType="com.github.theresajayne.tranquility.model.beans.RegionVO">
+        SELECT
+            C.CONSTELLATION_ID,
+            C.CONSTELLATION_NAME,
+            R.REGION_ID,
+            R.REGION_NAME
+        FROM
+          TRANQUILITY.CONSTELLATION C
+          INNER JOIN TRANQUILITY.REGION R ON C.REGION_ID = R.REGION_ID
+        WHERE
+          C.REGION_ID = #{regionVO.regionID,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByID" resultMap="constellationResultMap" parameterType="java.lang.Long">
+        SELECT
+            C.CONSTELLATION_ID,
+            C.CONSTELLATION_NAME,
+            R.REGION_ID,
+            R.REGION_NAME
+        FROM
+          TRANQUILITY.CONSTELLATION C
+          INNER JOIN TRANQUILITY.REGION R ON C.REGION_ID = R.REGION_ID
+        WHERE
+          C.CONSTELLATION_ID = #{constellationID, jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByName" resultMap="constellationResultMap" parameterType="java.lang.String">
+        SELECT
+            C.CONSTELLATION_ID,
+            C.CONSTELLATION_NAME,
+            R.REGION_ID,
+            R.REGION_NAME
+        FROM
+          TRANQUILITY.CONSTELLATION C
+          INNER JOIN TRANQUILITY.REGION R ON C.REGION_ID = R.REGION_ID
+        WHERE
+          C.CONSTELLATION_NAME = #{constellationName, jdbcType=VARCHAR}
+    </select>
+
 
     <insert id="insertConstellation" parameterType="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
        INSERT INTO
@@ -30,14 +70,25 @@
        (
           CONSTELLATION_ID,
           CONSTELLATION_NAME,
-          UNIVERSE_ID
+          REGION_ID
 
        )
        VALUES
        (
-          #{constellationId, jdbcType=VARCHAR},
-          #{name, jdbcType=VARCHAR},
-          #{universeVO.universeID, jdbcType=VARCHAR}
+          #{constellationID, jdbcType=VARCHAR},
+          #{constellationName, jdbcType=VARCHAR},
+          #{regionVO.regionID, jdbcType=VARCHAR}
        )
    </insert>
+
+    <insert id="updateConstellation" parameterType="com.github.theresajayne.tranquility.model.beans.ConstellationVO">
+       UPDATE TRANQUILITY.CONSTELLATION
+        SET CONSTELLATION_ID =#{constellationID, jdbcType=VARCHAR},
+          CONSTELLATION_NAME =#{constellationName, jdbcType=VARCHAR},
+          REGION_ID =#{regionVO.regionID, jdbcType=VARCHAR}
+       WHERE
+          CONSTELLATION_ID =#{constellationID, jdbcType=VARCHAR}
+   </insert>
+
+
 </mapper>

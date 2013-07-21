@@ -25,8 +25,8 @@ public class SystemFBTest {
     public void aSystemHasAName()
     {
         SystemFB systemFB = new SystemFB();
-        systemFB.setName("Wuos");
-        assertEquals("Wuos",systemFB.getName());
+        systemFB.setSystemName("Wuos");
+        assertEquals("Wuos",systemFB.getSystemName());
     }
 
 

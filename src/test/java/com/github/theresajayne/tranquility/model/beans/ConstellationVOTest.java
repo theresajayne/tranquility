@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
@@ -27,8 +24,8 @@ public class ConstellationVOTest {
     public void constellationHasAName()
     {
         ConstellationVO constellationVO = new ConstellationVO();
-        constellationVO.setName("Geminate");
-        assertEquals("Geminate", constellationVO.getName());
+        constellationVO.setConstellationName("Geminate");
+        assertEquals("Geminate", constellationVO.getConstellationName());
     }
 
 

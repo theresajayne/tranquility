@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -31,8 +28,8 @@ public class UniverseFBTest {
     public void a_universe_has_a_name()
     {
         UniverseFB universeFB = new UniverseFB();
-        universeFB.setName("Eden");
-        assertEquals("Eden", universeFB.getName());
+        universeFB.setUniverseName("Eden");
+        assertEquals("Eden", universeFB.getUniverseName());
     }
 
 }

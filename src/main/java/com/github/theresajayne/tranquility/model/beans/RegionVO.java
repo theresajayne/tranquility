@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import com.github.theresajayne.tranquility.common.ValueObject;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -12,16 +10,16 @@ import java.util.List;
  */
 public class RegionVO extends ValueObject {
     private Long regionID;
-    private String name;
+    private String regionName;
     private UniverseVO universeVO;
 
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
     }
 
-    public String getName() {
-        return name;
+    public String getRegionName() {
+        return regionName;
     }
 
     public Long getRegionID() {

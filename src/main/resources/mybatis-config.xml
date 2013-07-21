@@ -24,6 +24,7 @@
     <mappers>
         <mapper resource="mappers/UniverseMapper.xml"/>
         <mapper resource="mappers/RegionMapper.xml"/>
+        <mapper resource="mappers/ConstellationMapper.xml"/>
     </mappers>
 
 </configuration>

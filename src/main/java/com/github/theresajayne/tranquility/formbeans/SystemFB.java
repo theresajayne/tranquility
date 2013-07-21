@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import com.github.theresajayne.tranquility.common.FormBean;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -11,16 +9,16 @@ import java.util.List;
  * Time: 19:29
  */
 public class SystemFB extends FormBean {
-    private String name;
+    private String systemName;
     private Long systemID;
     private ConstellationFB constellationFB;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSystemName(String systemName) {
+        this.systemName = systemName;
     }
 
-    public String getName() {
-        return name;
+    public String getSystemName() {
+        return systemName;
     }
 
     public Long getSystemID() {

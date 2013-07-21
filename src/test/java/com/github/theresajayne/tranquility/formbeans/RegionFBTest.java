@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
@@ -28,8 +25,8 @@ public class RegionFBTest {
     public void aRegionHasAName()
     {
         RegionFB regionFB = new RegionFB();
-        regionFB.setName("The Forge");
-        assertEquals("The Forge",regionFB.getName());
+        regionFB.setRegionName("The Forge");
+        assertEquals("The Forge",regionFB.getRegionName());
     }
 
 

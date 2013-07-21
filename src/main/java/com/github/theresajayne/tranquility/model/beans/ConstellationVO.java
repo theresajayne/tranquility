@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import com.github.theresajayne.tranquility.common.ValueObject;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -12,15 +10,15 @@ import java.util.List;
  */
 public class ConstellationVO extends ValueObject {
     private Long constellationID;
-    private String name;
+    private String constellationName;
     private RegionVO regionVO;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setConstellationName(String constellationName) {
+        this.constellationName = constellationName;
     }
 
-    public String getName() {
-        return name;
+    public String getConstellationName() {
+        return constellationName;
     }
 
     public Long getConstellationID() {

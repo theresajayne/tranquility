@@ -16,4 +16,8 @@ public interface UniverseDao {
     List<UniverseVO> getAllUniverses();
 
     void saveUniverse(UniverseVO universeVO);
+
+    UniverseVO getUniverseByName(String universeName);
+
+    UniverseVO getUniverseByID(Long universeID);
 }

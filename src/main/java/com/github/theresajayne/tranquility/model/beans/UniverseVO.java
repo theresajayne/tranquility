@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import com.github.theresajayne.tranquility.common.ValueObject;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -12,15 +10,9 @@ import java.util.List;
  */
 public class UniverseVO extends ValueObject {
     private Long universeID;
-    private String name;
+    private String universeName;
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getName() {
-        return name;
-    }
 
     public Long getUniverseID() {
         return universeID;
@@ -28,5 +20,13 @@ public class UniverseVO extends ValueObject {
 
     public void setUniverseID(Long universeID) {
         this.universeID = universeID;
+    }
+
+    public String getUniverseName() {
+        return universeName;
+    }
+
+    public void setUniverseName(String universeName) {
+        this.universeName = universeName;
     }
 }

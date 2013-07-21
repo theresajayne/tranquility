@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import com.github.theresajayne.tranquility.common.FormBean;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -12,15 +10,15 @@ import java.util.List;
  */
 public class RegionFB extends FormBean {
     private Long regionID;
-    private String name;
+    private String regionName;
     private UniverseFB universeFB;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
     }
 
-    public String getName() {
-        return name;
+    public String getRegionName() {
+        return regionName;
     }
 
     public UniverseFB getUniverseFB() {

@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import com.github.theresajayne.tranquility.common.ValueObject;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -11,16 +9,16 @@ import java.util.List;
  * Time: 18:58
  */
 public class SystemVO extends ValueObject {
-    private String name;
+    private String systemName;
     private Long systemID;
     private ConstellationVO constellationVO;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSystemName(String systemName) {
+        this.systemName = systemName;
     }
 
-    public String getName() {
-        return this.name;
+    public String getSystemName() {
+        return this.systemName;
     }
 
 

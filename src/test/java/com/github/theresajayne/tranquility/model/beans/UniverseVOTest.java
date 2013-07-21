@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
@@ -30,8 +27,8 @@ public class UniverseVOTest {
     public void a_universe_has_a_name()
     {
         UniverseVO universeVO = new UniverseVO();
-        universeVO.setName("Eden");
-        assertEquals("Eden", universeVO.getName());
+        universeVO.setUniverseName("Eden");
+        assertEquals("Eden", universeVO.getUniverseName());
     }
 
 }

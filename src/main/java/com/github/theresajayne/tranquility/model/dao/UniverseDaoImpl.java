@@ -28,6 +28,31 @@ public class UniverseDaoImpl implements UniverseDao {
 
     @Override
     public void saveUniverse(UniverseVO universeVO) {
-        sqlSession.insert("universeMapper.saveUniverse",universeVO);
+        UniverseVO tempRecord = getUniverseByID(universeVO.getUniverseID());
+        UniverseVO tempRecord2 = getUniverseByName(universeVO.getUniverseName());
+        if(tempRecord==null && tempRecord2 == null)
+        {
+            sqlSession.insert("universeMapper.saveUniverse",universeVO);
+        }
+        else
+        {
+            if(tempRecord != null)
+            {
+                sqlSession.update("universeMapper.updateUniverse",universeVO);
+            }
+        }
     }
+
+
+    @Override
+    public UniverseVO getUniverseByName(String universeName) {
+        return sqlSession.selectOne("universeMapper.selectAllByName",universeName);
+    }
+
+    @Override
+    public UniverseVO getUniverseByID(Long universeID) {
+        return sqlSession.selectOne("universeMapper.selectAllByID",universeID);
+    }
+
+
 }

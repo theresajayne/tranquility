@@ -38,12 +38,12 @@ public class RegionServiceImpl implements RegionService {
 
     @Override
     public RegionFB getRegionById(Long regionID) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return (RegionFB)converter.toFormBean(regionDao.getRegionByID(regionID));
     }
 
     @Override
     public RegionFB getRegionByName(String name) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return (RegionFB)converter.toFormBean(regionDao.getRegionByName(name));
     }
 
     @Override

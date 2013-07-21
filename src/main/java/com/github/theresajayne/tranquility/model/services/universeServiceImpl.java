@@ -39,12 +39,12 @@ public class UniverseServiceImpl implements UniverseService {
 
     @Override
     public UniverseFB getUniverseById(Long universeID) {
-        return null;
+        return (UniverseFB)converter.toFormBean(universeDao.getUniverseByID(universeID));
     }
 
     @Override
     public UniverseFB getUniverseByName(String name) {
-        return null;
+        return (UniverseFB)converter.toFormBean(universeDao.getUniverseByName(name));
     }
 
     @Override

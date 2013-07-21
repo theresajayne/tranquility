@@ -2,9 +2,6 @@ package com.github.theresajayne.tranquility.model.beans;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
@@ -28,8 +25,8 @@ public class RegionVOTest {
     public void aRegionHasAName()
     {
         RegionVO regionVO = new RegionVO();
-        regionVO.setName("The Forge");
-        assertEquals("The Forge",regionVO.getName());
+        regionVO.setRegionName("The Forge");
+        assertEquals("The Forge",regionVO.getRegionName());
     }
 
 

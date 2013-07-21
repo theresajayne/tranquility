@@ -32,16 +32,28 @@ public class RegionDaoImpl implements RegionDao {
 
     @Override
     public RegionVO getRegionByID(Long regionID) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return sqlSession.selectOne("regionMapper.selectByID",regionID);
     }
 
     @Override
-    public RegionVO getRegionByName(String name) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public RegionVO getRegionByName(String regionName) {
+        return sqlSession.selectOne("regionMapper.selectByName",regionName);
     }
 
     @Override
     public void saveRegion(RegionVO regionVO) {
-        sqlSession.insert("regionMapper.insertRegion",regionVO);
+        RegionVO tempRecord = getRegionByID(regionVO.getRegionID());
+        RegionVO tempRecord2 = getRegionByName(regionVO.getRegionName());
+        if(tempRecord== null&& tempRecord2==null)
+        {
+            sqlSession.insert("regionMapper.insertRegion",regionVO);
+        }
+        else
+        {
+            if(tempRecord!= null)
+            {
+                sqlSession.update("regionMapper.updateRegion",regionVO);
+            }
+        }
     }
 }

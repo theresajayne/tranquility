@@ -7,7 +7,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Tranquility</name>
+    <universeName>Tranquility</universeName>
     <url>http://maven.apache.org</url>
 
     <properties>

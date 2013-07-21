@@ -2,8 +2,6 @@ package com.github.theresajayne.tranquility.formbeans;
 
 import com.github.theresajayne.tranquility.common.FormBean;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Theresa
@@ -12,14 +10,14 @@ import java.util.List;
  */
 public class UniverseFB  extends FormBean {
     private Long universeID;
-    private String name;
+    private String universeName;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUniverseName(String universeName) {
+        this.universeName = universeName;
     }
 
-    public String getName() {
-        return name;
+    public String getUniverseName() {
+        return universeName;
     }
 
     public Long getUniverseID() {

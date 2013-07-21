@@ -20,6 +20,7 @@ import java.util.List;
  * Time: 17:16
  */
 @Component
+@SuppressWarnings("unchecked")
 public class ConverterImpl<F extends FormBean, V extends ValueObject> implements Converter<F, V> {
     private static Logger LOG = Logger.getLogger(ConverterImpl.class);
     private static final String DOT = ".";
@@ -33,7 +34,6 @@ public class ConverterImpl<F extends FormBean, V extends ValueObject> implements
      *
      * @param fb - An object of type FormBean
      * @return vo - An object of type ValueObject
-     * @throws
      */
     public V toValueObject(F fb) {
         if (fb == null) return null;
@@ -57,7 +57,6 @@ public class ConverterImpl<F extends FormBean, V extends ValueObject> implements
      *
      * @param vo - An object of type ValueObject
      * @return fb - An object of type FormBean
-     * @throws
      */
     public F toFormBean(V vo) {
         if (vo == null) return null;
@@ -142,7 +141,7 @@ public class ConverterImpl<F extends FormBean, V extends ValueObject> implements
         //If fields are of type Collection<ValueObject>
         if (Collection.class.isAssignableFrom(voField.getType()) && ValueObject.class.isAssignableFrom(getFieldGenericType(voField))) {
 
-            List<V> listOfVos = (List<V>) new Mirror().on(fb).invoke().getterFor(voField);
+            List<V> listOfVos = (List<V>) new Mirror().on(vo).invoke().getterFor(voField);
 
             if (listOfVos != null) {
 
@@ -261,7 +260,7 @@ public class ConverterImpl<F extends FormBean, V extends ValueObject> implements
             return ((Class) (genericType.getActualTypeArguments()[0])).getSuperclass();
         }
         //Returns dummy Boolean Class to compare with ValueObject & FormBean
-        return new Boolean(false).getClass();
+        return Boolean.class;
     }
 
     private void copyFbToVo(F fb, V v) {
